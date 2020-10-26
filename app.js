@@ -20,13 +20,13 @@ alert('error');
     decode_uri = decodeURIComponent(string);
     obj_split = decode_uri.split(delimiter);
     if (obj_split[2]) {
-    decode_part2 = decodeURIComponent(obj_split[2]);
+    decode_part2 = obj_split[2];
     decode_split = decode_part2.split(delimiter_2nd);
     output_uri = obj_split[1] + '&redirect_uri=' + decode_split[0]; 
     return output_uri;
     }
     else{
-    return false;
+    return 'wrong facebook url format, please check again';
     }
 
     }
